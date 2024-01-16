@@ -7,18 +7,7 @@ from selenium.webdriver.chrome.options import Options
 def navigate_to_url(driver, url):
     driver.get(url)
 
-# Function that autofill login details 
-# def autofill_form(driver, email_field, user_email, pwd_field, user_pwd, login):
-#     # Append email into the field
-#     email_field.send_keys(user_email)
-
-#     # Append password into the field
-#     pwd_field.send_keys(user_pwd)
-
-#     # Click on the login button
-#     login.click()
-
-# Function that autofill login details 
+# Function that autofill login and card billing details 
 def autofill_form(driver, submit_button=None, *fields):
     # Use for loop to loop through each tuple and append relevant data to the corresponding fields
     for field in fields:
