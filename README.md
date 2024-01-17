@@ -21,8 +21,7 @@ Before running the script, ensure you have the following components installed:
 ## Installation
 1. #### Clone the repository to your local machine:
 ```
-git clone https://github.com/your-username/automation-exercise.git
-cd automation-exercise
+git clone https://github.com/Nightowl914/SeleniumEShopAutomation.git
 ```
 
 2. #### Install the required Python packages:
