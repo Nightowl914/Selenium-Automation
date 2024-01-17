@@ -7,46 +7,50 @@ This repository contains Python code designed to automate interactions with a si
 Before running the script, ensure you have the following components installed:
 
 Python 3.x
+
 ChromeDriver (compatible with your Chrome browser version)
+
 Selenium WebDriver
+
 Chrome browser
+
 uBlock Origin extension (or any ad-blocking extension of your choice)
 
 ## Installation
-1. ### Clone the repository to your local machine:
+1. ##### Clone the repository to your local machine:
 ```
 git clone https://github.com/your-username/automation-exercise.git
 cd automation-exercise
 ```
 
-2. ### Install the required Python packages:
+2. ##### Install the required Python packages:
 ```
 pip install selenium
 ```
 
-3. ### Download ChromeDriver:
+3. ##### Download ChromeDriver:
 Download the appropriate ChromeDriver version from (https://sites.google.com/chromium.org/driver/) and place the executable in the project directory.
 
-4. ### Install an Ad-Blocking Extension:
+4. ##### Install an Ad-Blocking Extension:
 Install an ad-blocking extension such as uBlock Origin from the Chrome Web Store or your preferred source.
 
-5. ### Locate the Extension ID:
+5. ##### Locate the Extension ID:
 - After installation, locate the extension using the extension ID.
 - Navigate to C:\Users\[user_name]\AppData\Local\Google\Chrome\User Data\Default\Extensions\[folder_with_id].
 
-6. ### Copy the Extension Folder:
+6. ##### Copy the Extension Folder:
 Access the [folder_with_id] and copy the folder inside (e.g., a folder with the name 5.17.1_0) to a location of your choice.
 
-7. ### Compress the Folder:
+7. ##### Compress the Folder:
 Compress the copied folder into a zip file.
 
-8. ### Rename the Zip File:
+8. ##### Rename the Zip File:
 Rename the zip file to a name of your choice.
 
-9. ### Change File Type:
+9. ##### Change File Type:
 Change the file type of the zip file to .crx.
 
-10. ### Move to SeleniumEShopAutomation's Extensions Folder:
+10. ##### Move to SeleniumEShopAutomation's Extensions Folder:
 Drag and drop the .crx file inside the SeleniumEShopAutomation's extensions folder.
 
 ## Usage
