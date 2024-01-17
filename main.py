@@ -1,7 +1,8 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from module.automation_library import navigate_to_url, initialize_driver, autofill_form, search_product, view_product, add_to_cart, view_cart, checkout, place_order 
+from selenium.common.exceptions import NoSuchElementException, TimeoutException
+from module.automation_library import navigate_to_url, initialize_driver, autofill_form, search_product, view_product, add_to_cart, view_cart, checkout, place_order, download_invoice 
 import time
 
 def main():
@@ -65,6 +66,10 @@ def main():
         view_product(driver, product_link)
 
 
+        #Wait for the quantity field to be located
+        WebDriverWait(driver, wait).until(
+            EC.presence_of_element_located((By.ID, "quantity"))
+        )
         # Target quantity field
         qty_field = driver.find_element(By.ID, "quantity")
         # Ask user for quantity input
@@ -122,7 +127,25 @@ def main():
             (cardNumber_field, card_number), (cvc_field, cvc_number), 
             (expMonth_field, expiration_month), (expYear_field, expiration_year)
         )
+
+
+        # Target the download invoice button
+        download_invoice_btn = driver.find_element(By.XPATH, "//a[contains(@href, '/download_invoice/') and contains(text(), 'Download Invoice')]")
+        # Execute the code through the download_invoice function
+        download_invoice(driver, download_invoice_btn)
+    except NoSuchElementException as e:
+        print(f"Element not found: {e}")
+        # Throw error when element not found
+
+    except TimeoutException as e:
+        print(f"Timeout waiting for element: {e}")
+        # Throw error when timeout waiting for element
+
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+        # Throw error when unexpected error occurred
     finally:
+        print(f"Execution of the script completed successfully!")
         time.sleep(5)
         driver.quit()
 

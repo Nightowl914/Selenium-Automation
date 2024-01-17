@@ -22,14 +22,22 @@ def autofill_form(driver, submit_button=None, *fields):
 def initialize_driver():
     service = Service(executable_path="chromedriver.exe")
 
-    # add in extension path for adblock
+    # add in extension path for adblock extension
     extension_path = './extensions/uBlockOrigin.crx'
 
     # Create Chrome options
     chrome_options = Options()
+
+    # Run script in headless mode
+    # chrome_options.add_argument('--headless')
     
     # Add the extension to Chrome options
     chrome_options.add_extension(extension_path)
+
+    # Specify the invoice download path
+    chrome_options.add_experimental_option("prefs", {
+        "download.default_directory": "C:\\Users\\User\\Downloads\\Invoice"
+    })
 
     return webdriver.Chrome(service=service, options=chrome_options)
 
@@ -66,6 +74,10 @@ def checkout(driver, checkout_btn):
 def place_order(driver, placeOrder_btn):
     # Click on the place order button
     placeOrder_btn.click()
+
+def download_invoice(driver, download_invoice_btn):
+    # Click on the download invoice button
+    download_invoice_btn.click()
 
 
 
