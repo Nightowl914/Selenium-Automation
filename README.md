@@ -1,5 +1,6 @@
 # SeleniumEShopAutomation - E-commerce Website Automation
 
+
 ## Introduction
 This repository contains Python code designed to automate interactions with a simulated e-commerce website (https://www.automationexercise.com/) using Selenium. The automation script simulates a user's journey through the website, including logging in, searching for a product, adding it to the cart, and placing an order. The script uses the Selenium WebDriver to interact with the website's elements and perform various actions.
 
