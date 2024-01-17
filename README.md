@@ -3,6 +3,7 @@
 ## Introduction
 This repository contains Python code designed to automate interactions with a simulated e-commerce website (https://www.automationexercise.com/) using Selenium. The automation script simulates a user's journey through the website, including logging in, searching for a product, adding it to the cart, and placing an order. The script uses the Selenium WebDriver to interact with the website's elements and perform various actions.
 
+
 ## Prerequisites
 Before running the script, ensure you have the following components installed:
 
@@ -16,6 +17,7 @@ Before running the script, ensure you have the following components installed:
 - ##### Chrome browser
 
 - ##### uBlock Origin extension (or any ad-blocking extension of your choice)
+
 
 ## Installation
 1. #### Clone the repository to your local machine:
@@ -54,6 +56,7 @@ pip install selenium
 10. #### Move to SeleniumEShopAutomation's Extensions Folder:
     ##### Drag and drop the .crx file inside the SeleniumEShopAutomation's extensions folder.
 
+
 ## Usage
 #### 1. Open the main.py file.
 #### 2. Update the following variables with your specific details:
@@ -77,6 +80,7 @@ python main.py
 ```
 ##### The script will launch a Chrome browser with the ad-blocking extension, navigate through the specified URLs, and perform the automated actions.
 
+
 ## Functions
 ##### The script is organized into functions for better modularity:
 
@@ -91,8 +95,10 @@ python main.py
 - ##### place_order: Places an order in the checkout process.
 - ##### download_invoice: Downloads the order invoice.
 
+
 ## Error Handling
 ##### The script includes error handling for 'NoSuchElementException' and 'TimeoutException'. If an unexpected error occurs, it will be displayed with a corresponding message.
+
 
 ## Note
 - ##### The script uses Chrome as the default browser. Ensure Chrome is installed on your machine.
