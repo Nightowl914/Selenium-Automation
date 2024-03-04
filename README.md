@@ -30,7 +30,7 @@ pip install selenium
 ```
 
 3. #### Download ChromeDriver:
-   ##### Download the appropriate ChromeDriver version from (https://sites.google.com/chromium.org/driver/) and place the executable in the project directory.
+   ##### Download the appropriate ChromeDriver version from (https://googlechromelabs.github.io/chrome-for-testing/#stable) and place the executable in the project directory.
 
 4. #### Install an Ad-Blocking Extension:
    ##### Install an ad-blocking extension such as uBlock Origin from the Chrome Web Store or your preferred source.
